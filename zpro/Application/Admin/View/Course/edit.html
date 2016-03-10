@@ -1,0 +1,10 @@
+<FORM method="post" action="__URL__/update">
+课程名称：<INPUT type="text" name="coursename" value="{$vo.coursename}"><br/>
+人数限制：<INPUT type="text" name="totallimit"><br/>
+每班名额：<INPUT type="text" name="classlimit"><br/>
+
+课程描述：<TEXTAREA name="coursedes" rows="5" cols="45">{$vo.coursedes}</TEXTAREA><br/>
+
+<INPUT type="hidden" name="id" value="{$vo.id}">
+<INPUT type="submit" value="提交">
+</FORM>

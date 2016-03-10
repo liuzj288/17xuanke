@@ -1,0 +1,152 @@
+
+	<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">青岛十七中选课</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+        
+      
+      </ul>
+    
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="#">您好，亲爱的{$Think.session.username}同学</a></li>
+ <li><a href="{:U('Member/logout')}">退出</a></li>
+       
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	
+		
+<p>
+热爱编程,arduino/raspberry的同学请加群536466362，诸如web/php/html/js/python/c/asp.net/linux/ubuntu.
+</p>
+
+<form action="__URL__/select" method="post">
+	<table class="table .table-condensed">
+			<thead>
+					<tr>
+						<th>
+							序号
+						</th>
+						<th>
+							选修课名称
+						</th>
+						<th>
+							说明
+						</th>
+						
+						<th>
+							已选 / 剩余
+						</th>
+						<th>
+							授课教师
+						</th>
+						<th>
+							备注
+						</th>
+						<th>
+							操作
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+	
+		<volist name="result" id="vo">
+		
+	
+<eq name="no_select" value="-1">
+	<tr class='info'>
+		<td>{$i}</td>
+		<td>{$vo.coursename}</td>
+		<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+		<td>&nbsp;&nbsp;{$vo.selected}/&nbsp;&nbsp;{$vo.totallimit}</td>
+		<td>{$vo.teacher_name|mb_substr=0,4,'utf-8'}</td>
+		<td>{$vo.remark}</td>
+
+		<!-- <td><a href="__URL__/edit/id/{$vo.id}">修改</a></td> -->
+		<td><a href="__URL__/select/id/{$vo.id}">选课</a>					
+		</td>
+		<td>
+		<!-- <a href="__URL__/unselect/id/{$vo.id}">退课</a>					 -->
+		</td>
+
+	</tr>
+<else/>
+<eq name="vo.id" value="$select_course">
+		<tr class="warning">
+				<td>{$i}</td>
+				<td>{$vo.coursename}</td>
+				<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+				<!-- <td><a href="__URL__/edit/id/{$vo.id}">修改</a></td> -->
+				<!-- <td>
+				<a href="__URL__/select/id/{$vo.id}">选课</a>					
+				</td> --><td>&nbsp;&nbsp;{$vo.selected}/&nbsp;&nbsp;{$vo.totallimit}</td>
+		<td>{$vo.teacher_name|mb_substr=0,4,'utf-8'}</td>
+		<td>{$vo.remark}</td>
+				<td>
+				<a href="__URL__/unselect/id/{$vo.id}">退课</a>		
+		
+					
+				</td>
+
+			</tr>
+		<else/>
+		<tr class='info'>
+				<td>{$i}</td>
+				<td>{$vo.coursename}</td>
+				<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+				<!-- <td><a href="__URL__/edit/id/{$vo.id}">修改</a></td> -->	<td>&nbsp;&nbsp;{$vo.selected}/&nbsp;&nbsp;{$vo.totallimit}</td>
+		<td>{$vo.teacher_name|mb_substr=0,4,'utf-8'}</td>
+		<td>{$vo.remark}</td>
+				<td>
+				选课
+					<!-- <a href="__URL__/select/id/{$vo.id}">选课</a>					 -->
+				</td>
+	
+		
+			<!-- 	<td><a href="__URL__/unselect/id/{$vo.id}">退课</a>					
+				</td> -->
+
+			</tr>
+		</eq>
+</eq>
+
+		
+		</volist>
+		<tbody>
+	</table>
+	
+</form>
+	</div>
+	</div>
+	</div>
+	</body>
+
+<div class="container">
+            <footer class="footer">
+            <p class="pull-right"><a href="#">返回顶部</a></p>
+            <p>小错误导致大麻烦。关于选课系统的任何问题请加群536466362。</p>
+            <p>版权声明： <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            </footer>
+        </div>
+
