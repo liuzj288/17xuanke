@@ -56,14 +56,19 @@ class IndexController extends Controller {
             }
             $select = M('member_course');
            
-            M('course')->where('id='.$id)->setInc('selected');
+            
             $data['member_id'] = session('uid');
             $data['course_id'] = $result['id'];       
             $data['class'] = M('member') -> where('uid='.$_SESSION['uid'])->getField('class');
-            M('course')->startTrans();
+            $data['select_time'] = date('Y-m-d H:i:s');
+
+            M('course')->startTrans();           
 
             $selectResult = $select->add($data);
+
+            M('course')->where('id='.$id)->setInc('selected');
             $incResult = M('course')->where($course_id)->save();
+
             if($selectResult){
                 $select->commit();
             }else{

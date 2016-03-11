@@ -13,18 +13,18 @@
 
     <!-- Bootstrap core CSS -->
 
-<link rel="stylesheet" href="/zpro/Public/css/bootstrap.min.css">
+<link rel="stylesheet" href="/17xuanke/zpro/Public/css/bootstrap.min.css">
 
 
 
 
 
     <!-- Custom styles for this template -->
-    <link href="/zpro/Public/css/jumbotron.css" rel="stylesheet">
+    <link href="/17xuanke/zpro/Public/css/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/zpro/Public/js/ie-emulation-modes-warning.js"></script>
+    <script src="/17xuanke/zpro/Public/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,7 +62,7 @@
     
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href="#">您好，亲爱的<?php echo (session('username')); ?>同学</a></li>
+        <li><a href="#">您好ss，亲爱的<?php echo (session('username')); ?>同学</a></li>
  <li><a href="<?php echo U('Member/logout');?>">退出</a></li>
        
         </li>
@@ -73,10 +73,10 @@
 	
 		
 <p>
-热爱编程的同学请加群536466362，诸如web/php/html/js/python/c/asp.net/linux/ubuntu.
+热爱编程,arduino/raspberry的同学请加群536466362，诸如web/php/html/js/python/c/asp.net/linux/ubuntu.
 </p>
 
-<form action="/zpro/index.php/Home/Index/select" method="post">
+<form action="/17xuanke/zpro/index.php/Home/Index/select" method="post">
 	<table class="table .table-condensed">
 			<thead>
 					<tr>
@@ -115,11 +115,11 @@
 		<td><?php echo (mb_substr($vo["teacher_name"],0,4,'utf-8')); ?></td>
 		<td><?php echo ($vo["remark"]); ?></td>
 
-		<!-- <td><a href="/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->
-		<td><a href="/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					
+		<!-- <td><a href="/17xuanke/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->
+		<td><a href="/17xuanke/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					
 		</td>
 		<td>
-		<!-- <a href="/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>					 -->
+		<!-- <a href="/17xuanke/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>					 -->
 		</td>
 
 	</tr>
@@ -128,14 +128,14 @@
 				<td><?php echo ($i); ?></td>
 				<td><?php echo ($vo["coursename"]); ?></td>
 				<td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td>
-				<!-- <td><a href="/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->
+				<!-- <td><a href="/17xuanke/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->
 				<!-- <td>
-				<a href="/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					
+				<a href="/17xuanke/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					
 				</td> --><td>&nbsp;&nbsp;<?php echo ($vo["selected"]); ?>/&nbsp;&nbsp;<?php echo ($vo["totallimit"]); ?></td>
 		<td><?php echo (mb_substr($vo["teacher_name"],0,4,'utf-8')); ?></td>
 		<td><?php echo ($vo["remark"]); ?></td>
 				<td>
-				<a href="/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>		
+				<a href="/17xuanke/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>		
 		
 					
 				</td>
@@ -146,16 +146,16 @@
 				<td><?php echo ($i); ?></td>
 				<td><?php echo ($vo["coursename"]); ?></td>
 				<td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td>
-				<!-- <td><a href="/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->	<td>&nbsp;&nbsp;<?php echo ($vo["selected"]); ?>/&nbsp;&nbsp;<?php echo ($vo["totallimit"]); ?></td>
+				<!-- <td><a href="/17xuanke/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->	<td>&nbsp;&nbsp;<?php echo ($vo["selected"]); ?>/&nbsp;&nbsp;<?php echo ($vo["totallimit"]); ?></td>
 		<td><?php echo (mb_substr($vo["teacher_name"],0,4,'utf-8')); ?></td>
 		<td><?php echo ($vo["remark"]); ?></td>
 				<td>
 				选课
-					<!-- <a href="/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					 -->
+					<!-- <a href="/17xuanke/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					 -->
 				</td>
 	
 		
-			<!-- 	<td><a href="/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>					
+			<!-- 	<td><a href="/17xuanke/zpro/index.php/Home/Index/unselect/id/<?php echo ($vo["id"]); ?>">退课</a>					
 				</td> -->
 
 			</tr><?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
@@ -181,15 +181,15 @@
     ================================================== -->
   <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/zpro/Public/js/bootstrap.min.js"></script>
+    <script src="/17xuanke/zpro/Public/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/zpro/Public/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/17xuanke/zpro/Public/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
 
 
 <!-- 可选的Bootstrap主题文件（一般不用引入） -->
-<link rel="stylesheet" href="/zpro/Public/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/17xuanke/zpro/Public/css/bootstrap-theme.min.css">
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

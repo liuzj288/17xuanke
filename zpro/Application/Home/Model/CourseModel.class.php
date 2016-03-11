@@ -1,7 +1,8 @@
 <?php
 namespace Home\Model;
-use Think\Model\AdvModel;
-class Course extends AdvModel {
+use Think\Model;
+class Course extends Model {
     // 定义自动验证
+    
 
  }
