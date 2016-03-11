@@ -50,9 +50,9 @@
 						<th>
 							选修课名称
 						</th>
-						<th>
+						<!-- <th>
 							说明
-						</th>
+						</th> -->
 						
 						<th>
 							已选 / 剩余
@@ -78,7 +78,7 @@
 	<tr class='info'>
 		<td>{$i}</td>
 		<td>{$vo.coursename}</td>
-		<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+		<!-- <td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td> -->
 		<td>&nbsp;&nbsp;{$vo.selected}/&nbsp;&nbsp;{$vo.totallimit}</td>
 		<td>{$vo.teacher_name|mb_substr=0,4,'utf-8'}</td>
 		<td>{$vo.remark}</td>
@@ -96,7 +96,7 @@
 		<tr class="warning">
 				<td>{$i}</td>
 				<td>{$vo.coursename}</td>
-				<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+				<!-- <td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td> -->
 				<!-- <td><a href="__URL__/edit/id/{$vo.id}">修改</a></td> -->
 				<!-- <td>
 				<a href="__URL__/select/id/{$vo.id}">选课</a>					
@@ -114,7 +114,7 @@
 		<tr class='info'>
 				<td>{$i}</td>
 				<td>{$vo.coursename}</td>
-				<td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td>
+				<!-- <td>{$vo.coursedes|mb_substr=0,10,'utf-8'}...</td> -->
 				<!-- <td><a href="__URL__/edit/id/{$vo.id}">修改</a></td> -->	<td>&nbsp;&nbsp;{$vo.selected}/&nbsp;&nbsp;{$vo.totallimit}</td>
 		<td>{$vo.teacher_name|mb_substr=0,4,'utf-8'}</td>
 		<td>{$vo.remark}</td>

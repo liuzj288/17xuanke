@@ -62,7 +62,7 @@
     
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href="#">您好ss，亲爱的<?php echo (session('username')); ?>同学</a></li>
+        <li><a href="#">您好，亲爱的<?php echo (session('username')); ?>同学</a></li>
  <li><a href="<?php echo U('Member/logout');?>">退出</a></li>
        
         </li>
@@ -86,9 +86,9 @@
 						<th>
 							选修课名称
 						</th>
-						<th>
+						<!-- <th>
 							说明
-						</th>
+						</th> -->
 						
 						<th>
 							已选 / 剩余
@@ -110,7 +110,7 @@
 		<?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if(($no_select) == "-1"): ?><tr class='info'>
 		<td><?php echo ($i); ?></td>
 		<td><?php echo ($vo["coursename"]); ?></td>
-		<td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td>
+		<!-- <td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td> -->
 		<td>&nbsp;&nbsp;<?php echo ($vo["selected"]); ?>/&nbsp;&nbsp;<?php echo ($vo["totallimit"]); ?></td>
 		<td><?php echo (mb_substr($vo["teacher_name"],0,4,'utf-8')); ?></td>
 		<td><?php echo ($vo["remark"]); ?></td>
@@ -127,7 +127,7 @@
 <?php if(($vo["id"]) == $select_course): ?><tr class="warning">
 				<td><?php echo ($i); ?></td>
 				<td><?php echo ($vo["coursename"]); ?></td>
-				<td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td>
+				<!-- <td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td> -->
 				<!-- <td><a href="/17xuanke/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->
 				<!-- <td>
 				<a href="/17xuanke/zpro/index.php/Home/Index/select/id/<?php echo ($vo["id"]); ?>">选课</a>					
@@ -145,7 +145,7 @@
 		<tr class='info'>
 				<td><?php echo ($i); ?></td>
 				<td><?php echo ($vo["coursename"]); ?></td>
-				<td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td>
+				<!-- <td><?php echo (mb_substr($vo["coursedes"],0,10,'utf-8')); ?>...</td> -->
 				<!-- <td><a href="/17xuanke/zpro/index.php/Home/Index/edit/id/<?php echo ($vo["id"]); ?>">修改</a></td> -->	<td>&nbsp;&nbsp;<?php echo ($vo["selected"]); ?>/&nbsp;&nbsp;<?php echo ($vo["totallimit"]); ?></td>
 		<td><?php echo (mb_substr($vo["teacher_name"],0,4,'utf-8')); ?></td>
 		<td><?php echo ($vo["remark"]); ?></td>
