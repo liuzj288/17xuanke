@@ -26,7 +26,7 @@
 						</head>
 						<body>
 						<div class="error">
-						<img src="http://www.9ht.com/up/2012-7/2012072714013616245.gif"/>
+						<img src=""/>
 						<h1><?php echo strip_tags($e['message']);?></h1>
 						<div class="content">
 						<?php if(isset($e['file'])) {?>
