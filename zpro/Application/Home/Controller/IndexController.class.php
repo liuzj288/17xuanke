@@ -45,7 +45,7 @@ class IndexController extends Controller {
         $check = D('member_course');
         $selected = $check->where('course_id='.$id.' and member_id= '.$uid) -> find();
         if($selected['course_id']){
-            $this->error('不要重复选课');
+            redirect(U('Index/index'));
         }
 
         $result = $course-> where($course_id) -> find();   #根据课程id查找相关信息
