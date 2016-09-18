@@ -41,21 +41,22 @@ class IndexController extends Controller {
        
         $course = D('course');
         $course_id['id'] = $id;
+        $uid = $_SESSION['uid'];
+        $check = D('member_course');
+        $selected = $check->where('course_id='.$course_id.' and member_id= '.$uid) -> find();
+        if($selected['course_id']){
+            $this->error('不要重复选课');
+        }
+
         $result = $course-> where($course_id) -> find();   #根据课程id查找相关信息
         #可以直接写成getField
         #用count函数来统计选课人数
         #如果还可以选择
         if($result['totallimit'] - $result['selected'] >0){
 			$class = M('Member')->where($course_id)->getField('class');			
-            $s['class'] = $class;            $s['course_id'] = $id;            
-            $classlimit =$course->where($course_id)->getField('classlimit');
-            $num = M('member_course') ->where($s) -> count();
-			#如果classlimit是0，说明不限制
-            if ($classlimit && $num >= $classlimit ){
-                $this->error('抱歉，你们班级名额已满');
-            }
+            $s['class'] = $class;            $s['course_id'] = $id;
+
             $select = M('member_course');
-           
             
             $data['member_id'] = session('uid');
             $data['course_id'] = $result['id'];       
@@ -63,7 +64,8 @@ class IndexController extends Controller {
             $data['select_time'] = date('Y-m-d H:i:s');
 
             M('course')->startTrans();           
-
+            #用户每次单击选择的时候都判断用户是否已经选择
+            #如果用户已经选择则数量不加1
             $selectResult = $select->add($data);
 
             M('course')->where('id='.$id)->setInc('selected');
@@ -78,7 +80,7 @@ class IndexController extends Controller {
    
           
          }else{
-            $this->error('亲，你来晚了，呜哈哈哈哈哈');
+            $this->error('选课人数已满，请选择其他课程');
          }
 
     	
