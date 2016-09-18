@@ -43,7 +43,7 @@ class IndexController extends Controller {
         $course_id['id'] = $id;
         $uid = $_SESSION['uid'];
         $check = D('member_course');
-        $selected = $check->where('course_id='.$course_id.' and member_id= '.$uid) -> find();
+        $selected = $check->where('course_id='.$id.' and member_id= '.$uid) -> find();
         if($selected['course_id']){
             $this->error('不要重复选课');
         }
