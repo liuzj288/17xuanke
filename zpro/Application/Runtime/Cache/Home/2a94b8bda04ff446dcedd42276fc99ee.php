@@ -71,10 +71,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 	
-		
-<p>
-热爱编程,arduino/raspberry的同学请加群536466362，诸如web/php/html/js/python/c/asp.net/linux/ubuntu.
-</p>
+
 
 <form action="/17xuanke/zpro/index.php/Home/Index/select" method="post">
 	<table class="table .table-condensed">
@@ -171,8 +168,7 @@
 <div class="container">
             <footer class="footer">
             <p class="pull-right"><a href="#">返回顶部</a></p>
-            <p>小错误导致大麻烦。关于选课系统的任何问题请加群536466362。</p>
-            <p>版权声明： <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+
             </footer>
         </div>
 
